@@ -16,3 +16,22 @@
     }
   </select>
 </div>
+<hr />
+<div>
+  <label>Department:</label>
+  <select (change)="getDesignationByDeptId($event)">
+    <option value="">Select Department</option>
+    @for (dept of departmentList(); track dept.departmentId) {
+      <option [value]="dept.departmentId">{{ dept.departmentName }}</option>
+    }
+  </select>
+</div>
+<div>
+  <label>Designation:</label>
+  <select>
+    <option value="">Select Designation</option>
+    @for (desg of designationList(); track desg.designationId) {
+      <option [value]="desg.designationId">{{ desg.designationName }}</option>
+    }
+  </select>
+</div>
